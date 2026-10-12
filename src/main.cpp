@@ -35,6 +35,13 @@ void printForward(Node* head) {
     }
 }
 
+void printBackward(Node* tail) {
+    cout << "Backward:" << endl;
+    for (Node* cur = tail; cur != nullptr; cur = cur->prev) {
+        cout << cur->data << endl;
+    }
+}
+
 int main() {
     Node* head = nullptr;
     Node* tail = nullptr;
@@ -45,5 +52,6 @@ int main() {
     append(head, tail, "Song E");
     displayList(head);
     printForward(head);
+    printBackward(tail);
     return 0;
 }
