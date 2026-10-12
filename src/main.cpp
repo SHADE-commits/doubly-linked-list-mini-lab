@@ -28,6 +28,13 @@ void displayList(Node* head) {
     cout << endl;
 }
 
+void printForward(Node* head) {
+    cout << "Forward:" << endl;
+    for (Node* cur = head; cur != nullptr; cur = cur->next) {
+        cout << cur->data << endl;
+    }
+}
+
 int main() {
     Node* head = nullptr;
     Node* tail = nullptr;
@@ -37,5 +44,6 @@ int main() {
     append(head, tail, "Song D");
     append(head, tail, "Song E");
     displayList(head);
+    printForward(head);
     return 0;
 }
