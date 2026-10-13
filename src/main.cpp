@@ -68,10 +68,10 @@ bool deleteNode(Node*& head, Node*& tail, string target) {
     else
         head = cur->next;
 
-    if (cur->next != nullptr)
-        cur->next->prev = cur->prev;
-    else
-        tail = cur->prev;
+    // if (cur->next != nullptr)
+    //    cur->next->prev = cur->prev;
+    // else
+    //    tail = cur->prev;
 
     delete cur;
     return true;
